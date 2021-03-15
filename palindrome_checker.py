@@ -14,7 +14,7 @@ class PalindromeChecker:
                     palindromes.append(sub_string)
                 counter += 1
         return palindromes
-    
+
     def get_longest_palindrome(self, string):
         palindromes = self.get_palindromes(string)
         longest_palindrome = ""
