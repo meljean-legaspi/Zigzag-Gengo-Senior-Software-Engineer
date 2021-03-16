@@ -6,13 +6,16 @@ class PalindromeChecker:
     def get_palindromes(self, string):
         string_length = len(string)
         palindromes = []
-        for index in range(string_length):
-            counter = 1
-            while counter < string_length:
-                sub_string = string[index:counter + 1]
-                if self.is_palindrome(sub_string):
-                    palindromes.append(sub_string)
-                counter += 1
+        pointer = 0
+        nextPointer = pointer + 1
+        while (pointer < string_length and nextPointer < string_length):
+            sub_string = string[pointer:nextPointer + 1]
+            if self.is_palindrome(sub_string):
+                palindromes.append(sub_string)
+                pointer = nextPointer + 1
+                nextPointer = pointer + 1
+            else:
+                nextPointer += 1
         return palindromes
 
     def get_longest_palindrome(self, string):
