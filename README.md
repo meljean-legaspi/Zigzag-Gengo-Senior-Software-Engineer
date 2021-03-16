@@ -1,4 +1,13 @@
 # Technical Notes
+## Running the Application
+Run the following from the console:
+
+     py palindrome_app.py
+
+After that, the application asks for a string and prints the following:
+- whether the whole string is a palindrome
+- the longest palindrome substring we can get from the string
+
 ## Solution Explanation
 ### Level 1
 Used Python's slicing function to reverse the input string. If the input string is the same with the reversed, the **is_palindrome** function returns **True**.
