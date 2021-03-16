@@ -1,4 +1,9 @@
 # Technical Notes
+## Build Info
+[![Python application](https://github.com/meljean-legaspi/Zigzag-Gengo-Senior-Software-Engineer/actions/workflows/python-app.yml/badge.svg)](https://github.com/meljean-legaspi/Zigzag-Gengo-Senior-Software-Engineer/actions/workflows/python-app.yml)
+
+The project is tested every commit via GitHub Actions workflow.
+
 ## Running the Application
 Run the following from the console:
 
@@ -13,7 +18,7 @@ After that, the application asks for a string and prints the following:
 Used Python's slicing function to reverse the input string. If the input string is the same with the reversed, the **is_palindrome** function returns **True**.
 
 ### Level 2
-An array of all possible palindromes for the input string are fetched first using the **get_palindromes** function. Then, the output from the previous function is used by the **get_longest_palindrome** function.
+An array of all possible palindromes for the input string are generated first using the **generate_palindromes** function. Then, the output from the previous function is used by the **get_longest_palindrome** function.
 
 A single while loop is used to get the palindromes. We iterate through the string. Using the slice function, we get the substring from index 0 (pointer) to the next character (nextPointer).
 
@@ -28,4 +33,4 @@ With this implementation, we don't get all the possible palindromes (i.e. palind
 In **get_longest_palindrome**, we iterate through the palindromes array. We used a variable called **longest_palindrome** which holds the longest palindrome. The length of the **longest_palindrome** is checked against the next string in the loop. If that next string is longer, we use that instead. The output we got when we reach the end of the loop is then returned by the function.
 
 ### Level 3
-The solution for level 3 is not yet available.
+The cuts are counted in the **generate_palindromes** function. The number can be retrieved via the **get_palindromes_cut** function. The solution is still considered incomplete.
